@@ -18,12 +18,10 @@
   <ion-row class="ion-justify-content-center" *ngIf="this.segment == 'usuarios'">
     <ion-col size="12" size-lg="5">
 
-    <ion-card>
-      
+    <ion-card>      
       <ng-container *ngFor="let usuario of this.usuarios">
-
         <ion-item color="warning">
-          <ion-label >
+          <ion-label>
             <h1>{{ usuario.nome}}</h1>
             <h3>Idade: {{ usuario.idade}}</h3>
             <h3>Gênero: {{ usuario.genero}}</h3>
@@ -43,20 +41,32 @@
               </ng-container>
             </div>
           </ion-accordion>    
-        </ion-accordion-group>        
-
+        </ion-accordion-group>       
       </ng-container>
-
     </ion-card>
-
     </ion-col>
   </ion-row>
 
   <!--vizualicao treinos-->
   <ion-row class="ion-justify-content-center" *ngIf="this.segment == 'treinos'">
-    <ion-col size="12" size-lg="5">Treinos</ion-col>
+    <ion-col size="12" size-lg="5">
+      <ng-container *ngFor="let treino of this.treinos">
+        <ion-card>
+          <ion-item color="warning">
+            <ion-label>
+              <h1>{{ treino.nome }}</h1>
+              <h3>Series: {{ treino.series }}</h3>
+              <ion-row class="ion-justify-content-center">
+                <ion-col size="12" size-lg="5">
+                  <img src="{{ treino.foto }}" class="borda">
+                </ion-col>
+              </ion-row>
+            </ion-label>          
+          </ion-item>
+        </ion-card>
+        </ng-container>
+    </ion-col>    
   </ion-row>
-    
 </ion-content>
 
 

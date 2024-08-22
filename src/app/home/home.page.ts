@@ -13,72 +13,56 @@ export class HomePage {
 
   segment: string='usuarios';
 
-  lista_de_treinos = [
-    { 
-      nome: 'Crucifixo', 
-      aplicacao: 'Peito', 
-      descricao: 'Trabalhar a parte inferior do peito.', 
-      foto: 'https://images.pexels.com/photos/4754001/pexels-photo-4754001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+  treinos = [
+    {
+      nome: 'Pulley',
+      series: 3,
+      foto: 'https://www.blog.treinoemalta.com.br/wp-content/uploads/2023/07/Triceps-Pulley-Barra.gif'
     },
-    { 
-      nome: 'Supino Reto', 
-      aplicacao: 'Peito', 
-      descricao: 'Desenvolve a parte superior do peito e os tríceps.', 
-      foto: 'https://images.pexels.com/photos/2261481/pexels-photo-2261481.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    {
+      nome: 'Agachamento Sumô',
+      series: 3,
+      foto: 'https://www.mundoboaforma.com.br/wp-content/uploads/2021/09/agachamento-sumo-sem-halter.gif'
     },
-    { 
-      nome: 'Agachamento Livre', 
-      aplicacao: 'Pernas', 
-      descricao: 'Exercício básico para o desenvolvimento das pernas e glúteos.', 
-      foto: 'https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    {
+      nome: 'Supino Reto',
+      series: 4,
+      foto: 'https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/supino-reto.gif'
     },
-    { 
-      nome: 'Remada Curvada', 
-      aplicacao: 'Costas', 
-      descricao: 'Fortalece a musculatura das costas e dos ombros.', 
-      foto: 'https://images.pexels.com/photos/3927387/pexels-photo-3927387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    {
+      nome: 'Remada Unilateral',
+      series: 4,
+      foto: 'https://static.wixstatic.com/media/2edbed_cf8feb6f79494833b887104bc358843d~mv2.gif'
     },
-    { 
-      nome: 'Elevação Lateral', 
-      aplicacao: 'Ombros', 
-      descricao: 'Trabalha a parte lateral dos ombros.', 
-      foto: 'https://images.pexels.com/photos/1160787/pexels-photo-1160787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    {
+      nome: 'Levantamento Terra',
+      series: 4,
+      foto: 'https://www.hipertrofia.org/blog/wp-content/uploads/2017/11/barbell-deadlift.gif'
     },
-    { 
-      nome: 'Rosca Direta', 
-      aplicacao: 'Braços', 
-      descricao: 'Exercício básico para o desenvolvimento dos bíceps.', 
-      foto: 'https://images.pexels.com/photos/3823075/pexels-photo-3823075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    {
+      nome: 'Flexão de Braços',
+      series: 3,
+      foto: 'https://www.mundoboaforma.com.br/wp-content/uploads/2021/04/flexao-de-bracos.gif'
     },
-    { 
-      nome: 'Leg Press', 
-      aplicacao: 'Pernas', 
-      descricao: 'Fortalece os músculos das coxas e glúteos.', 
-      foto: 'https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    {
+      nome: 'Cadeira Abdutora',
+      series: 3,
+      foto: ''
     },
-    { 
-      nome: 'Desenvolvimento com Halteres', 
-      aplicacao: 'Ombros', 
-      descricao: 'Trabalha a parte frontal dos ombros.', 
-      foto: 'https://images.pexels.com/photos/3076515/pexels-photo-3076515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    {
+      nome: 'Rosca Direta',
+      series: 3,
+      foto: 'https://static.wixstatic.com/media/2edbed_8a612c33a1f649578ade7454653f7f30~mv2.gif'
     },
-    { 
-      nome: 'Pulldown', 
-      aplicacao: 'Costas', 
-      descricao: 'Exercício para o desenvolvimento do latíssimo do dorso.', 
-      foto: 'https://images.pexels.com/photos/3041367/pexels-photo-3041367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    {
+      nome: 'Prancha',
+      series: 3,
+      foto: 'https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/prancha-com-elevacao-das-pernas-prancha-aranha.gif'
     },
-    { 
-      nome: 'Tríceps Testa', 
-      aplicacao: 'Braços', 
-      descricao: 'Fortalece os músculos tríceps.', 
-      foto: 'https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-    },
-    { 
-      nome: 'Cadeira Extensora', 
-      aplicacao: 'Pernas', 
-      descricao: 'Exercício focado no quadríceps.', 
-      foto: 'https://images.pexels.com/photos/5473185/pexels-photo-5473185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    {
+      nome: 'Extensão de Tríceps na Polia',
+      series: 3,
+      foto: 'https://www.mundoboaforma.com.br/wp-content/uploads/2021/07/triceps-no-pulley-atras-ca-cabeca.gif'
     }
   ];
   
