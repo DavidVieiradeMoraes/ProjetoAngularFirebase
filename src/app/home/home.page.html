@@ -20,7 +20,7 @@
 
     <ion-card>      
       <ng-container *ngFor="let usuario of this.usuarios">
-        <ion-item color="warning">
+        <ion-item color="primary">
           <ion-label>
             <h1>{{ usuario.nome}}</h1>
             <h3>Idade: {{ usuario.idade}}</h3>
@@ -35,7 +35,7 @@
             </ion-item>
             <div class="ion-padding" slot="content" class="warning">
               <ng-container *ngFor="let treino of rotina.treinos">
-                <ion-item color="warning">
+                <ion-item color="success">
                   <ion-label>{{ treino }}</ion-label>
                 </ion-item>
               </ng-container>
@@ -52,7 +52,7 @@
     <ion-col size="12" size-lg="5">
       <ng-container *ngFor="let treino of this.treinos">
         <ion-card>
-          <ion-item color="warning">
+          <ion-item color="primary">
             <ion-label>
               <h1>{{ treino.nome }}</h1>
               <h3>Series: {{ treino.series }}</h3>
