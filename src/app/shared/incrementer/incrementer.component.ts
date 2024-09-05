@@ -14,6 +14,7 @@ export class IncrementerComponent  implements OnInit {
   ngOnInit() {}
 
   decrementar() {
+    if (this.valor > 0)
     this.valor--;
   }
 
